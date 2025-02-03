@@ -1,11 +1,15 @@
 const open = (data) => {
+  const validJobs = ["police", "bcso"];
+  if (!validJobs.includes(data.job)) return;
+
   $('#name').css('color', '#282828');
 
   $('#name').text(data.name);
-  $('#dob').text(data.dateofbirth);
+  $('#dob').text(data.dob);
   $('#signature').text(data.name);
 
-  $('#id-card').css('background', 'url(assets/images/lspd.png)');
+  let image = `${data.job}.png`;
+  $('#id-card').css('background', `url('assets/images/${image}')`);
 
   $('#id-card').show();
 }

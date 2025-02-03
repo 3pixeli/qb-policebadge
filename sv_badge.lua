@@ -6,7 +6,8 @@ AddEventHandler('badge:open', function(ID, targetID, type)
 
 	local data = {
 		name = Player.PlayerData.charinfo.firstname.." "..Player.PlayerData.charinfo.lastname,
-		dob = Player.PlayerData.charinfo.dob
+		dob = Player.PlayerData.charinfo.dob,
+		job = Player.PlayerData.job.name
 	}
 
 	TriggerClientEvent('badge:open', targetID, data)

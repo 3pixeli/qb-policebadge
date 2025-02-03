@@ -14,7 +14,8 @@ AddEventHandler('badge:open', function( data, type )
 	SendNUIMessage({
 		action = "open",
 		name = data.name,
-		dateofbirth = data.dob
+		dob = data.dob,
+		job = data.job
 	})
 	DeleteEntity(plate_net)
 	DeleteEntity(NetToObj(plate_net))
